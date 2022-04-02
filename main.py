@@ -43,7 +43,7 @@ def register():
                         "nama" : [nama],
                         "password" : [password],
                         "role" : [role],
-                        "saldo" : []
+                        "saldo" : [0]
             }
     df1 = pd.DataFrame(data=datauser)
 
@@ -54,7 +54,19 @@ def register():
 def login():
     username = input("Masukkan username: ")
     password = input("Masukkan password: ")
-        
+    indeks = 0
+    ada = False
+    logged = False
+    while ada == False:
+        if (df1["username"][indeks]) == username and (df1["password"][indeks]) == password:
+            print("Halo", (df1["nama"][indeks])), '! Selamat datang di "Binomo".'
+            ada == True
+            logged == True
+        else:
+            print("Password atau username salah atau tidak ditemukan.")
+            indeks += 1
+    
+
 
 elif pilih == "mencoba_sesuatu":
     if log == False:
