@@ -67,7 +67,7 @@ def login():
             indeks += 1
     
 
-
+'''
 elif pilih == "mencoba_sesuatu":
     if log == False:
         print("Maaf, anda harus login terlebih dahulu untuk mengirim perintah selain login")
@@ -79,3 +79,4 @@ elif pilih == "hanya_user":
 elif pilih == "hanya_admin":
     if jadiAdmin == False:
         print("Maaf anda tidak memiliki izin untuk menjalankan perintah berikut. Mintalah ke administrator untuk melakukan hal tersebut.")
+        '''
