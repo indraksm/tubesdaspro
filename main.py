@@ -1,17 +1,17 @@
 from tkinter import FALSE
 import pandas as pd
 
-df1 = pd.read_csv('./user.csv', sep = ";")
-df2 = pd.read_csv('./game.csv', sep = ";")
-df3 = pd.read_csv('./kepemilikan.csv', sep = ";")
-df4 = pd.read_csv('./riwayat.csv', sep = ";")
+df1 = pd.read_csv('user.csv', sep = ";")
+df2 = pd.read_csv('game.csv', sep = ";")
+df3 = pd.read_csv('kepemilikan.csv', sep = ";")
+df4 = pd.read_csv('riwayat.csv', sep = ";")
 
 #Untuk syarat Register Username dan Password
 huruf = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 angka = "0123456789_-"
     
 #F02 Register
-def register(df1):
+def register():
     sama = False
     valid = True
     jadiUser = False
@@ -49,20 +49,10 @@ def register(df1):
 
         
         
-        
-
-
-
+    
 #F03 Login
-elif pilih == "login":
-    a = input("Masukkan username: ")
-    b = input("Masukkan password: ")
-    for i in range(len(user)):
-        if a == user[i] and b == passw[i]:
-            print("Halo", nama, '! Selamat datang di "Binomo" ')
-            log = True
-        else:
-            print("Password atau username salah atau tidak ditemukan")
+def login():
+    
 
 elif pilih == "mencoba_sesuatu":
     if log == False:
