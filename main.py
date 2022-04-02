@@ -52,7 +52,9 @@ def register():
     
 #F03 Login
 def login():
-    
+    username = input("Masukkan username: ")
+    password = input("Masukkan password: ")
+        
 
 elif pilih == "mencoba_sesuatu":
     if log == False:
