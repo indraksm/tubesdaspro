@@ -1,5 +1,5 @@
 from function import *
 
-def ubah_stok():
+def ubah_stok(game):
     id = input("Masukkan id game: ")
     
