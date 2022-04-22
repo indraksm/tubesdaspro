@@ -1,7 +1,6 @@
 import time
 from function import *
 
-
 def kerangajaib():
 
     jawaban = ["Iya", "Tidak", "Yooo ndak tahu kok tanya saya", "sabeb", "masa sihh", "mau", "ah gatau males pengen beli truk", "yakali", "o aja", 
