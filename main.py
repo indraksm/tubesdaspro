@@ -24,5 +24,3 @@ while end == False:
     admin = False
     if command == "login":
         
-
-
