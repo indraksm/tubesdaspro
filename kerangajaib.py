@@ -1,17 +1,12 @@
 import time
-from tkinter import N
+from function import *
 
-def panjang(listx):
-    n = 0
-    for i in listx:
-        n += 1
-    return n
 
 def kerangajaib():
 
     jawaban = ["Iya", "Tidak", "Yooo ndak tahu kok tanya saya", "sabeb", "masa sihh", "mau", "ah gatau males pengen beli truk", "yakali", "o aja", 
             "gantengg", "tanya aja ke tembok", "naon yakkk"]
-    length = panjang(jawaban)
+    length = length(jawaban)
 
     input("Apa pertanyaanmu? ")
 
