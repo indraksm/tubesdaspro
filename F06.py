@@ -1,3 +1,5 @@
+from function import *
+
 def ubah_stok():
     id = input("Masukkan id game: ")
     if id  not in (game.csv):
