@@ -1,6 +1,7 @@
 from ast import Assign
 from function import *
 from kerangajaib import kerangajaib
+from F03 import *
 from F04 import *
 from F06 import *
 from F07 import *
@@ -23,4 +24,4 @@ while end == False:
     log = False
     admin = False
     if command == "login":
-        
+
