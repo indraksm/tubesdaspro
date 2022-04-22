@@ -1,5 +1,6 @@
 from tkinter import FALSE
-import pandas as pd
+import argparse
+
 
 df1 = pd.read_csv('user.csv', sep = ";")
 df2 = pd.read_csv('game.csv', sep = ";")
