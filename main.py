@@ -1,83 +1,28 @@
-from tkinter import FALSE
+from ast import Assign
+from function import *
+from kerangajaib import kerangajaib
+from F04 import *
+from F06 import *
+from F07 import *
+from F12 import *
 import argparse
 
+parser = argparse.ArgumentParser()
+parser.add_argument('folder')
+args = parser.parse_args()
 
-df1 = pd.read_csv('user.csv', sep = ";")
-df2 = pd.read_csv('game.csv', sep = ";")
-df3 = pd.read_csv('kepemilikan.csv', sep = ";")
-df4 = pd.read_csv('riwayat.csv', sep = ";")
+dfuser = csv_to_array("C:\TubesDaspro\tubesdaspro\user.csv")
+dfgame = csv_to_array("C:\TubesDaspro\tubesdaspro\game.csv")
+dfriwayat = csv_to_array("C:\TubesDaspro\tubesdaspro\riwayat.csv")
+dfkepemilikan = csv_to_array("C:\TubesDaspro\tubesdaspro\kepemilikan.csv")
 
-#Untuk syarat Register Username dan Password
-huruf = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-angka = "0123456789_-"
-    
-#F02 Register
-def register():
-    sama = False
-    valid = True
-    jadiUser = False
-    nama = input("Masukan nama: ")
-    username = input("Masukan username: ")
-    password = input("Masukan password: ")
+end = False
 
-    for i in df1["username"]:
-        if i == username:
-            sama = True
-
-    if sama == True:
-        print("Username", username, "sudah terpakai, silahkan gunakan username lain")
-
-    else:
-        for i in username:
-            if (i not in huruf) and (i not in huruf.lower()) and (i not in angka):
-                valid = False
-        if valid == False:
-            print("Username", username, "tidak valid")
-        else:
-            print("Username", username, 'telah berhasil register ke dalam "Binomo".')
-            jadiUser = True
-            if jadiUser == True:
-                role = "User"
-            
+while end == False:
+    command = input(">>>").lower()
+    log = False
+    admin = False
+    if command == "login":
         
-            datauser = {"username" : [username],
-                        "nama" : [nama],
-                        "password" : [password],
-                        "role" : [role],
-                        "saldo" : [0]
-            }
-    df1 = pd.DataFrame(data=datauser)
 
-        
-        
-    
-#F03 Login
-def login():
-    username = input("Masukkan username: ")
-    password = input("Masukkan password: ")
-    indeks = 0
-    ada = False
-    logged = False
-    while ada == False:
-        if (df1["username"][indeks]) == username and (df1["password"][indeks]) == password:
-            print("Halo", (df1["nama"][indeks])), '! Selamat datang di "Binomo".'
-            ada == True
-            logged == True
-        else:
-            print("Password atau username salah atau tidak ditemukan.")
-            indeks += 1
-    
 
-'''
-elif pilih == "mencoba_sesuatu":
-    if log == False:
-        print("Maaf, anda harus login terlebih dahulu untuk mengirim perintah selain login")
-
-elif pilih == "hanya_user":
-    if jadiUser == False:
-        print("Maaf, anda harus menjadi user untuk melakukan hal tersebut.")
-    
-elif pilih == "hanya_admin":
-    if jadiAdmin == False:
-        print("Maaf anda tidak memiliki izin untuk menjalankan perintah berikut. Mintalah ke administrator untuk melakukan hal tersebut.")
-        '''
